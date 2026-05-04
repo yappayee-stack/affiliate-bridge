@@ -1,4 +1,4 @@
-import { useMutation } from "convex/react";
+import { useAction, useMutation } from "convex/react";
 import {
   ArrowRight,
   Check,
@@ -53,6 +53,7 @@ export function LandingPage() {
   const [error, setError] = useState("");
   const [captured, setCaptured] = useState(false);
   const captureLead = useMutation(api.leads.capture);
+  const sendWelcomeEmail = useAction(api.sendWelcomeEmail.send);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,11 +62,15 @@ export function LandingPage() {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("Please enter a valid email"); return; }
     setIsSubmitting(true);
     try {
-      await captureLead({ email: email.trim(), name: name.trim() || undefined, source: "bridge-page" });
+      const result = await captureLead({ email: email.trim(), name: name.trim() || undefined, source: "bridge-page" });
+      // Send welcome email only for new sign-ups
+      if (!result.alreadyExists) {
+        sendWelcomeEmail({ email: email.trim(), name: name.trim() || undefined }).catch(() => {});
+      }
       setCaptured(true);
     } catch { setError("Something went wrong — try again"); }
     finally { setIsSubmitting(false); }
-  }, [email, name, captureLead]);
+  }, [email, name, captureLead, sendWelcomeEmail]);
 
   if (captured) return <ThankYouView />;
 
