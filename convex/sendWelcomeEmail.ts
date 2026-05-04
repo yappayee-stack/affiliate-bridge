@@ -1,6 +1,8 @@
 import { v } from "convex/values";
 import { action } from "./_generated/server";
 
+declare const process: { env: Record<string, string | undefined> };
+
 export const send = action({
   args: {
     email: v.string(),
