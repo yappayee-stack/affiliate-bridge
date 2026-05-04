@@ -46,16 +46,29 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
+  --color-pink-600: #db2777;
+  --color-pink-700: #be185d;
+  --color-pink-800: #9d174d;
+  --color-pink-900: #831843;
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 :root {
   --sidebar-width: 16rem;
   --sidebar-width-icon: 3rem;
 
-  --primary: var(--color-slate-900);
-  --primary-foreground: var(--color-white);
-  --sidebar-primary: var(--color-slate-900);
-  --sidebar-primary-foreground: var(--color-slate-50);
+  --primary: #db2777;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #db2777;
+  --sidebar-primary-foreground: #fdf2f8;
 
   --success: var(--color-emerald-600);
   --success-foreground: var(--color-white);
@@ -64,43 +77,43 @@
   --info: var(--color-cyan-500);
   --info-foreground: var(--color-white);
 
-  --chart-1: var(--color-teal-500);
-  --chart-2: var(--color-orange-500);
-  --chart-3: var(--color-cyan-500);
-  --chart-4: var(--color-rose-500);
-  --chart-5: var(--color-lime-500);
+  --chart-1: #ec4899;
+  --chart-2: #f472b6;
+  --chart-3: #f9a8d4;
+  --chart-4: #db2777;
+  --chart-5: #be185d;
 
   --radius: 0.625rem;
-  --background: oklch(0.985 0 0);
-  --foreground: oklch(0.15 0.01 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.01 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.01 260);
-  --secondary: oklch(0.96 0.005 260);
-  --secondary-foreground: oklch(0.3 0.01 260);
-  --muted: oklch(0.96 0.005 260);
-  --muted-foreground: oklch(0.45 0.015 260);
-  --accent: oklch(0.96 0.005 260);
-  --accent-foreground: oklch(0.15 0.01 260);
+  --background: #fdf2f8;
+  --foreground: #1f1225;
+  --card: #ffffff;
+  --card-foreground: #1f1225;
+  --popover: #ffffff;
+  --popover-foreground: #1f1225;
+  --secondary: #fce7f3;
+  --secondary-foreground: #831843;
+  --muted: #fce7f3;
+  --muted-foreground: #9d174d;
+  --accent: #fce7f3;
+  --accent-foreground: #1f1225;
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.005 260);
-  --input: oklch(0.92 0.005 260);
-  --ring: oklch(0.3 0.02 260);
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.15 0.01 260);
-  --sidebar-accent: oklch(0.96 0.005 260);
-  --sidebar-accent-foreground: oklch(0.15 0.01 260);
-  --sidebar-border: oklch(0.92 0.005 260);
-  --sidebar-ring: oklch(0.3 0.02 260);
+  --border: #fbcfe8;
+  --input: #fbcfe8;
+  --ring: #db2777;
+  --sidebar: #fdf2f8;
+  --sidebar-foreground: #1f1225;
+  --sidebar-accent: #fce7f3;
+  --sidebar-accent-foreground: #1f1225;
+  --sidebar-border: #fbcfe8;
+  --sidebar-ring: #db2777;
 }
 
 .dark {
-  --primary: var(--color-white);
-  --primary-foreground: var(--color-slate-900);
-  --sidebar-primary: var(--color-white);
-  --sidebar-primary-foreground: var(--color-slate-900);
+  --primary: #f472b6;
+  --primary-foreground: #1f1225;
+  --sidebar-primary: #f472b6;
+  --sidebar-primary-foreground: #1f1225;
 
   --success: var(--color-emerald-400);
   --success-foreground: var(--color-emerald-950);
@@ -109,35 +122,35 @@
   --info: var(--color-cyan-400);
   --info-foreground: var(--color-cyan-950);
 
-  --chart-1: var(--color-teal-400);
-  --chart-2: var(--color-orange-400);
-  --chart-3: var(--color-cyan-400);
-  --chart-4: var(--color-rose-400);
-  --chart-5: var(--color-lime-400);
+  --chart-1: #f472b6;
+  --chart-2: #ec4899;
+  --chart-3: #f9a8d4;
+  --chart-4: #db2777;
+  --chart-5: #be185d;
 
-  --background: oklch(0.12 0.01 260);
-  --foreground: oklch(0.95 0.005 260);
-  --card: oklch(0.16 0.01 260);
-  --card-foreground: oklch(0.95 0.005 260);
-  --popover: oklch(0.16 0.01 260);
-  --popover-foreground: oklch(0.95 0.005 260);
-  --secondary: oklch(0.22 0.01 260);
-  --secondary-foreground: oklch(0.9 0.005 260);
-  --muted: oklch(0.22 0.01 260);
-  --muted-foreground: oklch(0.6 0.01 260);
-  --accent: oklch(0.22 0.01 260);
-  --accent-foreground: oklch(0.95 0.005 260);
+  --background: #1a0a14;
+  --foreground: #fdf2f8;
+  --card: #2d1226;
+  --card-foreground: #fdf2f8;
+  --popover: #2d1226;
+  --popover-foreground: #fdf2f8;
+  --secondary: #2d1226;
+  --secondary-foreground: #f9a8d4;
+  --muted: #2d1226;
+  --muted-foreground: #f472b6;
+  --accent: #2d1226;
+  --accent-foreground: #fdf2f8;
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.9 0.01 260);
-  --sidebar: oklch(0.14 0.01 260);
-  --sidebar-foreground: oklch(0.95 0.005 260);
-  --sidebar-accent: oklch(0.22 0.01 260);
-  --sidebar-accent-foreground: oklch(0.95 0.005 260);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.9 0.01 260);
+  --border: rgba(244, 114, 182, 0.15);
+  --input: rgba(244, 114, 182, 0.15);
+  --ring: #f472b6;
+  --sidebar: #1a0a14;
+  --sidebar-foreground: #fdf2f8;
+  --sidebar-accent: #2d1226;
+  --sidebar-accent-foreground: #fdf2f8;
+  --sidebar-border: rgba(244, 114, 182, 0.15);
+  --sidebar-ring: #f472b6;
 }
 
 @layer base {
@@ -188,4 +201,47 @@
       max-width: 1280px;
     }
   }
+}
+
+/* Gradient animation for hero background */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Pulse glow for CTA */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(219, 39, 119, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(219, 39, 119, 0.5); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer for badges */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 33%, rgba(255,255,255,0.3) 50%, transparent 66%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
 }

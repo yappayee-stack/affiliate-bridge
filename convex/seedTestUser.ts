@@ -4,8 +4,8 @@ import { Scrypt } from "lucia";
 import { internalAction } from "./_generated/server";
 
 const TEST_USER = {
-  email: "agent@test.local",
-  password: "TestAgent123!",
+  email: "agent-4a8f6373@test.local",
+  password: "xNttO1YclJltjm1AYJkdTMFGUumwK1wQ",
   name: "Test Agent",
 } as const;
 
