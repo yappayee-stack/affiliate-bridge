@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { api } from "../../convex/_generated/api";
 
-const AFFILIATE_URL = "https://affbaylanding-dmqrqdof.manus.space/";
+const AFFILIATE_URL = "https://beacons.ai/affiliatebaybe";
 
 /* ───────── Thank You ───────── */
 function ThankYouView() {
