@@ -83,7 +83,7 @@ function EmailCaptureForm({ variant, onSuccess }: { variant: "hero" | "card"; on
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    if (!email.trim()) { setError("Drop your email, babe! 💌"); return; }
+    if (!email.trim()) { setError("Drop your email! 💌"); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("Hmm, that doesn't look right 🤔"); return; }
     setIsSubmitting(true);
     try {
@@ -162,7 +162,7 @@ function ThankYouView() {
         </div>
         <div className="space-y-3">
           <h2 className="text-4xl md:text-5xl font-black text-foreground" style={{ fontFamily: "var(--font-serif)" }}>
-            You're In, Babe! 🎉
+            You're In! 🎉
           </h2>
           <p className="text-muted-foreground text-lg max-w-md mx-auto">
             Check your inbox for the free guide 💌<br/>
@@ -233,7 +233,7 @@ export function LandingPage() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight leading-[1.05]" style={{ fontFamily: "var(--font-serif)" }}>
-            Girl, It's Time to{" "}
+            Hey, It's Time to{" "}
             <span className="relative inline-block">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600">
                 Get Paid
@@ -347,7 +347,7 @@ export function LandingPage() {
             {[
               { icon: Clock, emoji: "📅", title: "30-Day Action Plan", desc: "Week-by-week breakdown. By day 30, you'll have 200+ subscribers." },
               { icon: Mail, emoji: "✉️", title: "8 Email Templates", desc: "Copy, paste, send. Battle-tested templates that get opens & clicks." },
-              { icon: Users, emoji: "👯‍♀️", title: "Community Access", desc: "Connect with other boss babes. Share wins & grow together." },
+              { icon: Users, emoji: "👯‍♀️", title: "Community Access", desc: "Connect with other creators. Share wins & grow together." },
             ].map(({ emoji, title, desc }, i) => (
               <div key={title} className="relative bg-white rounded-3xl border border-pink-100 p-7 text-center hover:shadow-xl hover:shadow-pink-100/50 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="absolute inset-0 bg-gradient-to-b from-pink-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -445,7 +445,7 @@ export function LandingPage() {
             <ArrowRight className="size-5" />
           </Button>
           <p className="text-xs text-muted-foreground">
-            🛡️ 90-day money-back guarantee — literally zero risk, babe
+            🛡️ 90-day money-back guarantee — literally zero risk
           </p>
         </div>
       </section>
