@@ -1,5 +1,11 @@
+export { Dashboard } from "./Dashboard";
 export { DashboardPage } from "./DashboardPage";
+export { default as Filters } from "./Filters";
 export { LandingPage } from "./LandingPage";
+export { FreeLanding } from "./FreeLanding";
+export { Links } from "./Links";
+export { MediaKit } from "./MediaKit";
 export { LoginPage } from "./LoginPage";
+export { Services } from "./Services";
 export { SettingsPage } from "./SettingsPage";
 export { SignupPage } from "./SignupPage";

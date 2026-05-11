@@ -31,13 +31,13 @@ function ThankYouView() {
         </div>
         <h2 className="text-2xl font-bold text-gray-900">You're in! 🎉</h2>
         <p className="text-gray-500">
-          Check your inbox for the free guide. Taking you to the full course now...
+          Check your inbox — your free guide preview is on the way! Taking you to the full course now...
         </p>
         <Button
           className="bg-pink-500 hover:bg-pink-600 text-white rounded-lg px-6 h-11 text-sm font-semibold"
           onClick={() => { window.location.href = AFFILIATE_URL; }}
         >
-          Go to the Course →
+          See the Full Course →
         </Button>
         <p className="text-xs text-gray-400 animate-pulse">Redirecting in {countdown}...</p>
       </div>
@@ -63,7 +63,6 @@ export function LandingPage() {
     setIsSubmitting(true);
     try {
       const result = await captureLead({ email: email.trim(), name: name.trim() || undefined, source: "bridge-page" });
-      // Send welcome email only for new sign-ups
       if (!result.alreadyExists) {
         sendWelcomeEmail({ email: email.trim(), name: name.trim() || undefined }).catch(() => {});
       }
@@ -81,21 +80,22 @@ export function LandingPage() {
         {/* ── Header ── */}
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 bg-pink-50 text-pink-600 text-xs font-semibold px-3 py-1.5 rounded-full">
-            ✨ FREE GUIDE
+            ✨ FREE CREATOR GUIDE
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-            How to Start Making Money<br />
-            <span className="text-pink-500">With Email Marketing</span>
+            The Creator's Guide to<br />
+            <span className="text-pink-500">Getting Paid Online</span>
           </h1>
+          <p className="text-sm text-gray-400">by Affiliate Baybe</p>
         </div>
 
         {/* ── Personal message ── */}
         <div className="bg-gray-50 rounded-2xl p-6 space-y-4">
           <p className="text-gray-600 text-[15px] leading-relaxed">
-            Hey! 👋 I put together a free starter guide that breaks down how email marketing actually works — and how you can start earning from it, even as a complete beginner.
+            Hey! 👋 I built a business while working full-time as a trauma nurse — and I put everything I learned into this free guide.
           </p>
           <p className="text-gray-600 text-[15px] leading-relaxed">
-            We're talking <span className="font-semibold text-gray-800">$36–$40 back for every $1 spent</span>. The guide covers finding your niche, building your list, writing emails that convert, and monetizing — all in 10 easy modules.
+            It covers <span className="font-semibold text-gray-800">building your brand, affiliate marketing, driving traffic, TikTok Shop strategy, AI tools</span>, and how to scale — all in 6 no-BS chapters with a 30-day action plan.
           </p>
           <p className="text-gray-600 text-[15px] leading-relaxed">
             Drop your info below and I'll send it right over. 👇
@@ -105,10 +105,12 @@ export function LandingPage() {
         {/* ── What's included (compact) ── */}
         <div className="flex flex-wrap justify-center gap-3">
           {[
-            "📚 10 Modules",
-            "📅 30-Day Plan",
-            "✉️ 8 Email Templates",
-            "👥 Community Access",
+            "📖 6 Chapters",
+            "📅 30-Day Action Plan",
+            "🛠️ Tools & Resources",
+            "🎯 TikTok Shop Strategy",
+            "🤖 AI Playbook",
+            "💰 Affiliate Blueprint",
           ].map((item) => (
             <span key={item} className="text-xs text-gray-500 bg-white border border-gray-200 rounded-full px-3 py-1.5">
               {item}
@@ -165,7 +167,7 @@ export function LandingPage() {
 
         {/* ── Footer ── */}
         <p className="text-center text-[11px] text-gray-300">
-          Affiliate Baybe
+          Affiliate Baybe · Cute Content. Real Checks.
         </p>
       </div>
     </div>
